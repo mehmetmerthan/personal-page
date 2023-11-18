@@ -90,7 +90,7 @@
 
 	/*--/ Star Typed /--*/
 	if ($('.text-slider').length == 1) {
-		var typed_strings = $('.text-slider-items').text();
+		var typed_strings = $('.my-slider').text();
 		var typed = new Typed('.text-slider', {
 			strings: typed_strings.split(','),
 			typeSpeed: 80,
@@ -103,7 +103,7 @@
 	/*--/ Testimonials owl /--*/
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 4000,
 		autoplayHoverPause: true,
 		responsive: {

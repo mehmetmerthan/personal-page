@@ -25,6 +25,13 @@
   box-shadow: 0 0 10px rgb(0, 0, 0);
   padding: 25px;
 }
+.necati-f {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  padding: 25px;
+}
 .owner {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0);
@@ -39,7 +46,6 @@
   background-color: transparent;
   padding: 50px;
 }
-
 h1,
 h2,
 h3,
@@ -153,7 +159,6 @@ a:hover {
 
 .overlay-mf {
   background-color: #ffffff00;
-
 }
 
 .overlay-mf {
@@ -173,7 +178,7 @@ a:hover {
 
 .display-table {
   width: 100%;
-  height: 100%;
+  height: 20%;
   display: table;
 }
 
@@ -211,9 +216,10 @@ a:hover {
 }
 
 .title-a {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Syncopate', sans-serif;
 }
 
 .subtitle-a {
@@ -236,6 +242,7 @@ a:hover {
 .title-left {
   font-size: 2rem;
   position: relative;
+  font-family: 'Syncopate', sans-serif;
 }
 
 .title-left:before {
@@ -487,6 +494,7 @@ a:hover {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
+  
 }
 
 .navbar-b.navbar-trans .nav-link:before,
@@ -701,6 +709,7 @@ a:hover {
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
+  
 }
 
 .intro .text-slider-items {
@@ -820,6 +829,7 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   padding: .4rem 0;
+  font-family: 'Philosopher', sans-serif;
 }
 
 .service-box .s-description {
@@ -949,6 +959,36 @@ a:hover {
   line-height: 1.6;
 }
 
+
+
+/* Dropdown menüsüne border ekleme */
+
+
+
+/* Dropdown içindeki linklerin rengi */
+
+
+/* Aktif (active) link rengi */
+
+
+/* Dropdown menüsüne border ekleme */
+.dropdown-menu {
+  border: 1px solid #ffffff !important; /* !important kullanarak spesifiklik sorunlarını çözebilirsiniz */
+  border-radius: 10px !important;
+}
+
+/* Dropdown içindeki linklere divider ekleme */
+.dropdown-item {
+  border-bottom: 1px solid rgba(107, 107, 107, 0.404) !important; /* !important kullanarak spesifiklik sorunlarını çözebilirsiniz */
+}
+.dropdown-item:last-child {
+  border-bottom: none !important; /* !important kullanarak spesifiklik sorunlarını çözebilirsiniz */
+}
+.dropdown-menu .dropdown-item {
+  font-size: 15px; /* İstediğiniz metin boyutunu burada belirleyebilirsiniz */
+  align-self: center;
+  text-align: center;
+}
 /*======================================
 //--//-->   BLOG
 ======================================*/
@@ -1009,6 +1049,7 @@ a:hover {
 .card-blog .card-title {
   font-size: 1.3rem;
   margin-top: .6rem;
+  font-family: 'Philosopher', sans-serif;
 }
 
 .card-blog .card-description {
@@ -1344,7 +1385,9 @@ footer .credits a {
   .widget-sidebar {
     padding: 3rem;
   }
-
+  .mobile-space {
+    margin-top: 50px; /* Ya da istediğiniz bir değer */
+  }
   .blog-wrapper .article-title {
     font-size: 1.9rem;
   }
@@ -1365,6 +1408,8 @@ footer .credits a {
     padding: 0 13rem;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .back-to-top {

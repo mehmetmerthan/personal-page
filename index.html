@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Personal page</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
   <meta content="" name="keywords">
   <meta content="" name="description">
 
@@ -21,15 +22,82 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Mr+De+Haviland&display=swap"
+    rel="stylesheet">
   <link href="css/style-sky-blue.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+  <style>
+    .my-intro-title {
+      font-family: 'Herr Von Muellerhoff', cursive;
+      color: #000000;
+      font-size: 2rem;
+      text-shadow: 4px 4px 4px #aaa;
+      -webkit-text-stroke: 0.5px #7e6f9a;
+      -webkit-text-fill: 5px rgb(0, 0, 0);
+    }
+
+    .my-content {
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .my-subtitle {
+      padding: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .intro-prefix {
+        font-size: 1.3rem !important
+      }
+
+      .text-slider {
+        font-size: 1rem !important;
+      }
+
+      .card{
+        margin-top: 10px !important;
+      }
+      .necati{
+        margin-top: 10px !important;
+      }
+    }
+
+    .text-slider {
+      margin-left: 5px;
+      font-size: 2rem;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 3px 3px 3px #ababab;
+      color: #000000;
+      font-weight: lighter;
+    }
+
+    .my-slider {
+      display: none;
+    }
+
+    .intro-prefix {
+      font-size: 3rem;
+      color: #000000;
+      font-family: 'Orbitron', sans-serif !important;
+      text-shadow: 3px 3px 3px #ababab !important;
+    }
+
+    .lead {
+      font-family: 'Philosopher', sans-serif;
+    }
+  </style>
 </head>
 
 <body>
-  <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Welcome</a>
+      <a class="my-intro-title js-scroll" href="#page-top">Mehmet Mert Han</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -51,8 +119,39 @@
             <a class="nav-link js-scroll" href="#blog">Projects</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll" href="#references">References</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="extraMenu" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              RESUME
+            </a>
+            <div class="dropdown-menu" aria-labelledby="extraMenu">
+              <!-- Sertifikalar sayfasına yönlendiren bağlantı -->
+              <a class="dropdown-item" href="https://github.com/mehmetmerthan/my-celtificates/tree/main"
+                target="_blank">
+                Certificates
+              </a>
+              <!-- CV'yi indirmek için JavaScript kullanımı -->
+              <a class="dropdown-item" href="javascript:void(0);" onclick="downloadCV()">
+                CV
+              </a>
+            </div>
+          </li>
+
+          <!-- JavaScript fonksiyonu -->
+          <script>
+            function downloadCV() {
+              // PDF dosyasının bulunduğu URL
+              var pdfURL = '';
+
+              // Yeni bir pencerede PDF'yi indirme
+              window.open(pdfURL, '_blank');
+            }
+          </script>
         </ul>
       </div>
     </div>
@@ -60,18 +159,19 @@
 
   <div class="bg-image">
 
-    <div id="home" class="intro route">
-
-      <div class="intro-content display-table">
+    <div id="home">
+      <div class="my-content">
         <div class="table-cell">
           <div class="container">
             <!--<p class="display-6 color-d">Hello, world!</p>-->
-            <h1 class="intro-title mb-4">Mehmet Mert HAN</h1>
-            <p class="intro-subtitle"><strong>I am a</strong>
-              <span class="text-slider-items">Computer Engineer, Full
-                Stack Developer,
+            <p class="my-subtitle">
+              <strong class="intro-prefix">I am a</strong>
+              <span class="my-slider">
+                Computer Engineer,
+                Full Stack Developer,
+                Game Developer,
+                App Developer,
                 Entrepreneur,
-                Game Developer
               </span>
               <strong class="text-slider"></strong>
             </p>
@@ -79,56 +179,47 @@
           </div>
         </div>
       </div>
+
     </div>
-
-
-    <!--/ Intro Skew End /-->
-
-    <section id="about" class="necati">
-      <div class="container">
-        <div class="row">
-          <div class="necati">
-            <div class="">
+    <div class="container">
+      <div class="necati">
+        <div class="">
+          <div class="row">
+            <div class="col-md-6">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="img/MMH.jpg" class="owner" alt="">
-                      </div>
-                    </div>
-                    <!-- <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name:</span> <span>Mehmet Mert HAN</span></p>
-                        <p><span class="title-s">Profile:</span> <span>Full-stack Developer</span></p>
-                        <p><span class="title-s">Email:</span> <span>mehmetmerthann@gmail.com</span></p>
-                      </div>
-                    </div> -->
-                  </div>
-                  <div class="skill-mf">
-                    <!-- Skills section can be added here -->
+                <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img src="img/MMH.jpg" class="owner" alt="">
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">About me</h5>
-                    </div>
-                    <p class="lead">
-                      Welcome to my website! Allow me to introduce myself.
-                      <br><br>
-                      I am a passionate entrepreneur and computer engineer dedicated to turning my ideas into reality.
-                      <br>
-                      During school, I actively engaged in the software development community, transitioning from an
-                      instructor to the president, gaining valuable leadership experience.
-                    </p>
-                  </div>
+              </div>
+              <div class="skill-mf">
+                <!-- Skills section can be added here -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-me pt-4 pt-md-0">
+                <div class="title-box-2">
+                  <h5 class="title-left">About me</h5>
                 </div>
+                <p class="lead">
+                  Welcome to my website! Allow me to introduce myself.
+                  <br><br>
+                  I am a passionate entrepreneur and computer engineer dedicated to turning my ideas into reality.
+                  <br>
+                  During school, I actively engaged in the software development community, transitioning from an
+                  instructor to the president, gaining valuable leadership experience.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <br>
+      </div>
+    </div>
+    <div class="mobile-space"></div>
+
+    <section id="about" class="necati">
+      <div class="container">
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h3 class="title-a">
@@ -175,7 +266,8 @@
                 <p class="card-description">
                   Through sheer determination and unwavering commitment, I overcame the hurdles of fierce competition,
                   formidable rivals, and rigorous jury evaluations to become an ITU Core Entrepreneur. This program
-                  provided me with invaluable training in finance and business development, equipping me with the skills
+                  provided me with invaluable training in finance and business development, equipping me with the
+                  skills
                   necessary to transform my ideas into thriving ventures.
                 </p>
               </div>
@@ -219,41 +311,26 @@
             </div>
           </div>
         </div>
+        <style>
+          ul {
+            list-style-type: circle;
+            padding-left: 20px;
+          }
+        </style>
         <div class="row">
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="fab fa-java"></i></span>
+                <span class="ico-circle"><i class="fa-brands fa-react"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">JAVA</h2>
+                <h2 class="s-title">React</h2>
                 <p class="s-description text-center">
-                  Spring boot, maven, hibernate.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle">C#</span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">C#</h2>
-                <p class="s-description text-center">
-                  Unity c#, .NET, ASP.NET.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="fa-brands fa-python"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Python</h2>
-                <p class="s-description text-center">
-                  GPT api, AGI, difussion, fine tuning, selenium.
+                <ul>
+                  <li>React Native Framework</li>
+                  <li>React Framework</li>
+                  <li>JavaScript Libraries</li>
+                </ul>
                 </p>
               </div>
             </div>
@@ -266,7 +343,15 @@
               <div class="service-content">
                 <h2 class="s-title">Unity engine</h2>
                 <p class="s-description text-center">
-                  2D, 3D, AR, mobile, pc.
+                <ul>
+                  <li>3D Games</li>
+                  <li>2D Games</li>
+                  <li>Multiplayer Games</li>
+                  <li>AR Games</li>
+                  <li>Mobile Platform</li>
+                  <li>PC Platform</li>
+                  <li>WebGl Platform</li>
+                </ul>
                 </p>
               </div>
             </div>
@@ -274,12 +359,20 @@
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
+                <span class="ico-circle"><i class="fa-brands fa-aws"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Web development</h2>
+                <h2 class="s-title">Cloud development</h2>
                 <p class="s-description text-center">
-                  js, html, css, react, bootstrap, JSX.
+                <ul>
+                  <li>Amplify service</li>
+                  <li>S3 service</li>
+                  <li>Cognito service</li>
+                  <li>AppSync service</li>
+                  <li>API Gateway service</li>
+                  <li>Lambda service</li>
+                  <li>DynamoDB service</li>
+                </ul>
                 </p>
               </div>
             </div>
@@ -287,12 +380,22 @@
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="fa-solid fa-database"></i></span>
+                <span class="ico-circle">
+                  <i class="fa-solid fa-database"></i>
+                </span>
               </div>
               <div class="service-content">
                 <h2 class="s-title">Database</h2>
                 <p class="s-description text-center">
-                  MySQL, normalisation.
+                <ul>
+                  <li>Grapfql</li>
+                  <li>SQL</li>
+                  <li>NoSQL</li>
+                  <li>Apollo Grapfql</li>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                  <li>Normalization</li>
+                </ul>
                 </p>
               </div>
             </div>
@@ -300,120 +403,49 @@
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="fa-solid fa-server"></i></span>
+                <span class="ico-circle"><i class="fab fa-java"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Server</h2>
+                <h2 class="s-title">JAVA</h2>
                 <p class="s-description text-center">
-                  Apache, Tomcat.
+                <ul>
+                  <li>Spring Boot</li>
+                  <li>Layered Architecture </li>
+                  <li>Restful API</li>
+                </ul>
                 </p>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="fa-solid fa-shield-halved"></i></span>
+                <span class="ico-circle"><i class="fa-brands fa-python"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Security</h2>
+                <h2 class="s-title">Python</h2>
                 <p class="s-description text-center">
-                  exploit, sql injection.
+                <ul>
+                  <li>Selenium</li>
+                  <li>BeautifulSoup</li>
+                  <li>Scrapy</li>
+                  <li>OpenAI Apis</li>
+                  <li>AGI Artificial General Intelligence</li>
+                  <li>Diffusion models</li>
+                  <li>Llms Fine tuning</li>
+                </ul>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="fa-brands fa-dev"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Devops</h2>
-                <p class="s-description text-center">
-                  Docker, AWS.
-                </p>
-              </div>
-            </div>
-          </div>
+
+
+
         </div>
       </div>
     </section>
-
-    <div class="necati">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            References
-          </h3>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-      <div class="testimonials">
-        <div class="overlay-mf"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div id="testimonial-mf" class="owl-carousel owl-theme">
-                <div class="testimonial-box">
-                  <div class="author-test">
-                    <img src="img/FY.jpg" alt="" class="imgs">
-                    <span class="author">Assoc. Prof. Dr. Fatih yıldırım</span>
-                  </div>
-                  <div class="content-test">
-                    <p class="description lead">
-                      Erzurum Technical University, Department of Business Administration,
-                      Department Chair, Vice Dean, Expert in Management Strategies and Business Development.
-                    </p>
-                    <span class="comit"><i class="fa fa-quote-right"></i></span>
-                  </div>
-                </div>
-                <div class="testimonial-box">
-                  <div class="author-test">
-                    <img src="img/AE.jpg" alt="" class="imgs">
-                    <span class="author">Assoc. Prof. Dr. Atilla Ergüzen</span>
-                  </div>
-                  <div class="content-test">
-                    <p class="description lead">
-                      Kırıkkale University, Department of Computer Engineering, Department Chair.
-                    </p>
-                    <span class="comit"><i class="fa fa-quote-right"></i></span>
-                  </div>
-                </div>
-                <div class="testimonial-box">
-                  <div class="author-test">
-                    <img src="img/YP.jpg" alt="" class="imgs">
-                    <span class="author">PhD Yusuf Polat</span>
-                  </div>
-                  <div class="content-test">
-                    <p class="description lead">
-                      "Erzurum Technical University, Department of Mechanical Engineering, İTÜ mechanical engineering
-                      graduate.
-                      Research Assistant, Mechanical Engineer at TEMAG LAB
-                    </p>
-                    <span class="comit"><i class="fa fa-quote-right"></i></span>
-                  </div>
-                </div>
-                <div class="testimonial-box">
-                  <div class="author-test">
-                    <img src="img/man.png" alt="" class="imgs">
-                    <span class="author">PhD Enes Ayan</span>
-                  </div>
-                  <div class="content-test">
-                    <p class="description lead">
-                      "Kırıkkale University, Department of Computer Engineering, expert in deep learning and artificial
-                      intelligence.
-                    </p>
-                    <span class="comit"><i class="fa fa-quote-right"></i></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section id="blog" class="sezai">
+    <section id="blog" class="necati">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -448,9 +480,40 @@
                 <div class="post-author">
                   <div class="socials">
                     <ul>
-                      <li><a href="https://www.metadya.com"><span class="ico-circle"><i class="ion-link"></i></span></a></li>
-                      <li><a href="https://github.com/mehmetmerthan/metadya"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                      <li><a href="https://www.linkedin.com/company/metadyacorp/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://github.com/mehmetmerthan/metadya"><span class="ico-circle"><i
+                              class="ion-social-github"></i></span></a></li>
+                      <li><a href="https://www.linkedin.com/company/metadyacorp/"><span class="ico-circle"><i
+                              class="ion-social-linkedin"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-blog">
+              <div class="card-img">
+                <img src="img/" alt="" class="img-fluid"></a>
+              </div>
+              <div class="card-body">
+                <div class="card-category-box">
+                  <div class="card-category">
+                    <h6 class="category">App</h6>
+                  </div>
+                </div>
+                <h3 class="card-title">Full stack social media app</a></h3>
+                <p class="card-description">
+                  A virtual try-on experiment crafted with the power derived from graphic motifs for e-commerce
+                  services. Users can try on clothes on their own avatars, alter their hairstyles, and determine hair
+                  colors, ultimately deciding how they will appear.
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="post-author">
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://github.com/mehmetmerthan/metadya"><span class="ico-circle"><i
+                              class="ion-social-github"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -470,17 +533,18 @@
                 </div>
                 <h3 class="card-title">Full backend API</a></h3>
                 <p class="card-description">
-
-                  "A full backend API service coded with Java Spring Boot, Maven, and MySQL. The purpose of the API is
-                  to consolidate users' social media addresses into a single service. Within this service, I delved into
-                  various areas such as IoC."
+                  A full backend API service coded with Java Spring Boot, Maven, and MySQL. The purpose of the API is
+                  to consolidate users' social media addresses into a single service. Within this service, I delved
+                  into
+                  various areas such as IoC.
                 </p>
               </div>
               <div class="card-footer">
                 <div class="post-author">
                   <div class="socials">
                     <ul>
-                      <li><a href="https://github.com/mehmetmerthan/mediaShare"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                      <li><a href="https://github.com/mehmetmerthan/mediaShare"><span class="ico-circle"><i
+                              class="ion-social-github"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -498,32 +562,23 @@
                     <h6 class="category">Games</h6>
                   </div>
                 </div>
-                <h3 class="card-title">Games for mobile</a></h3>
+                <h3 class="card-title">Mobile & Pc games</a></h3>
                 <p class="card-description">
                   I have created numerous games for both computers and mobile devices.These games span across various
                   categories. I have extensive experience and a high level of
                   proficiency in Unity, as I have been using it for a long time.
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <!-- <div class="card-img">
-                <img src="img/kolaj.png" alt="" class="img-fluid"></a>
-              </div> -->
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">AI</h6>
+              <div class="card-footer">
+                <div class="post-author">
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://github.com/mehmetmerthan/images-of-games/tree/main"><span
+                            class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+
+                    </ul>
                   </div>
                 </div>
-                <h3 class="card-title">Personalized AI</a></h3>
-                <p class="card-description">
-                  I am continuing to research and develop a service where we can train diffusion models using our own
-                  photographs, particularly in the areas of txt2img and img2img. Here are some experimental results I
-                  have obtained.
-                </p>
               </div>
             </div>
           </div>
@@ -541,7 +596,8 @@
                 <h3 class="card-title">AR service for art</a></h3>
                 <p class="card-description">
                   It is a service designed for art, bringing together artists and collectors. We utilize augmented
-                  reality and gamification technologies, along with Flutter and Unity Engine, to create the system. You
+                  reality and gamification technologies, along with Flutter and Unity Engine, to create the system.
+                  You
                   can explore virtual exhibition halls and choose to completely conceal your identity as an artist or
                   collector if you wish.
                 </p>
@@ -556,21 +612,94 @@
               <div class="card-body">
                 <div class="card-category-box">
                   <div class="card-category">
-                    <h6 class="category">Trading bot</h6>
+                    <h6 class="category">AI</h6>
                   </div>
                 </div>
-                <h3 class="card-title">Customizable bot for exchanges</a></h3>
+                <h3 class="card-title">Personalized AI</a></h3>
                 <p class="card-description">
-                  It is a trading bot service specifically designed for cryptocurrency exchanges. We provide support to
-                  open-source projects and actively collaborate and communicate with both economists and project
-                  developers to enhance our own buy/sell strategies.
+                  I am continuing to research and develop a service where we can train diffusion models using our own
+                  photographs, particularly in the areas of txt2img and img2img. Here are some experimental results I
+                  have obtained.
                 </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="sezai" id="references">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            References
+          </h3>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="overlay-mf"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="testimonial-mf" class="owl-carousel owl-theme">
+                <div class="testimonial-box">
+                  <div class="author-test">
+                    <img src="img/FY.jpg" alt="" class="imgs">
+                    <span class="author">Assoc. Prof. Dr. Fatih yıldırım</span>
+                  </div>
+                  <div class="content-test">
+                    <p class="description lead">
+                      Erzurum Technical University, Department of Business Administration,
+                      Department Chair, Vice Dean, Expert in Management Strategies and Business Development.
+                    </p>
+                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <div class="author-test">
+                    <img src="img/AB.jpeg" alt="" class="imgs">
+                    <span class="author">Ali Balci</span>
+                  </div>
+                  <div class="content-test">
+                    <p class="description lead">
+                      General manager at Digitest defense and aerospace industry company.
+                    </p>
+                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <div class="author-test">
+                    <img src="img/AE.jpg" alt="" class="imgs">
+                    <span class="author">Assoc. Prof. Dr. Atilla Ergüzen</span>
+                  </div>
+                  <div class="content-test">
+                    <p class="description lead">
+                      Kırıkkale University, Department of Computer Engineering, Department Chair.
+                    </p>
+                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <div class="author-test">
+                    <img src="img/YP.jpg" alt="" class="imgs">
+                    <span class="author">PhD Yusuf Polat</span>
+                  </div>
+                  <div class="content-test">
+                    <p class="description lead">
+                      Erzurum Technical University, Department of Mechanical Engineering, İTÜ mechanical engineering
+                      graduate.
+                      Research Assistant, Mechanical Engineer at TEMAG LAB
+                    </p>
+                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <section id="contact" class="necati">
       <div class="overlay-mf"></div>
       <div class="container">
@@ -650,9 +779,10 @@
                     </div>
                     <div class="socials">
                       <ul>
-                        <li><a href="https://www.linkedin.com/in/mehmetmerthan/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                        <li><a href="https://github.com/mehmetmerthan"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                        <li><a href="https://instagram.com/mehmetmerthan_?igshid=NGExMmI2YTkyZg=="><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mehmetmerthan/"><span class="ico-circle"><i
+                                class="ion-social-linkedin"></i></span></a></li>
+                        <li><a href="https://github.com/mehmetmerthan"><span class="ico-circle"><i
+                                class="ion-social-github"></i></span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -693,8 +823,8 @@
   <script src="contactform/contactform.js"></script>
   <!-- Template Main Javascript File -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="js/main.js"></script>
-
   <script src="https://kit.fontawesome.com/45e4425f58.js" crossorigin="anonymous"></script>
 
 </body>
